@@ -7,8 +7,13 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-int main()
-{
+int main(int argc, char **argv)
+{   
+
+    if(argc != 2)
+    {
+        return -1;
+    }
 
     struct sockaddr_in *serverAddr;
     serverAddr->sin_family = AF_INET;
@@ -16,7 +21,7 @@ int main()
 
     memset(&(serverAddr->sin_addr), '\0',sizeof(serverAddr->sin_zero));
 
-    inet_pton(AF_INET,"192.168.177.128", &(serverAddr->sin_addr));
+    inet_pton(AF_INET,argv[1], &(serverAddr->sin_addr));
 
     char servIp[INET_ADDRSTRLEN];
 
@@ -28,7 +33,7 @@ int main()
     if(clientSock <0)
     {
         printf("client socket creation failed\n");
-        exit(-1);
+        exit(-2);
     }
 
     connect(clientSock, (struct sockaddr*)serverAddr, INET_ADDRSTRLEN);
