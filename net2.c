@@ -27,7 +27,7 @@ int main()
         exit(-1);
     }
 
-    // lets print all the stuff in linked list
+    // lets print all the server details in linked list
     for(struct addrinfo * PL = servinfo; PL != NULL; PL = PL->ai_next)
     {
         //ipv6 length can store both ipv6 and ipv4
@@ -104,7 +104,17 @@ int main()
 
     char msg[] = "hello client";
     int sentno = 0;
+    
+    /*display the connected client details*/
+    {
+        char clientIp[16];
+        inet_ntop(AF_INET6, &((struct sockaddr_in6*)&clientAddr)->sin6_addr, clientIp,INET6_ADDRSTRLEN);
+        printf("client Ipv4 address= %s\n",clientIp);
 
+        inet_ntop(AF_INET, &((struct sockaddr_in*)&clientAddr)->sin_addr, clientIp,INET_ADDRSTRLEN);
+        printf("client Ipv6 address= %s\n",clientIp);
+    }
+    
     sentno = send(client_sockfd, msg, sizeof(msg), 0);
     
     printf("sent the msg = %s\n number of bytes sent = %d\n", msg, sentno);
