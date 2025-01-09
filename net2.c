@@ -115,6 +115,7 @@ int main()
         printf("client Ipv6 address= %s\n",clientIp);
     }
     
+    // send the message and returns the number of bytes sent
     sentno = send(client_sockfd, msg, sizeof(msg), 0);
     
     printf("sent the msg = %s\n number of bytes sent = %d\n", msg, sentno);
