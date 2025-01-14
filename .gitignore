@@ -1,6 +1,7 @@
-/response.html
+response.html
 #ignore files in threads folder
-threads/
-
-#ignore exe files
-*
+threads/./threads/th
+./hello
+./sinclient
+./exClient
+./mulserve
