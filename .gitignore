@@ -3,4 +3,6 @@
 threads/
 
 #ignore exe files
-*
+sinclient
+exClient
+mulserve
