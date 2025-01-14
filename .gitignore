@@ -1,6 +1,11 @@
 response.html
 #ignore files in threads folder
-threads/./threads/th
+threads/
+./hello
+./sinclient
+./exClient
+./mulserve
+./threads/th
 ./hello
 ./sinclient
 ./exClient
