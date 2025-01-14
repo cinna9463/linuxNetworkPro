@@ -1,8 +1,9 @@
 response.html
 #ignore files in threads folder
 threads/
-./hello
-./sinclient
-./exClient
-./mulserve
+
+#ignore exe files
+sinclient
+exClient
+mulserve
 
