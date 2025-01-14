@@ -1,1 +1,6 @@
 /response.html
+#ignore files in threads folder
+threads/
+
+#ignore exe files
+*
