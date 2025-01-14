@@ -76,7 +76,7 @@ int main()
 
     printf("presentation of ipv6 = %s\n",sa6_p);*/
 
-    // socket is created with info about the type of portocol only and returns the file descriptor
+    // socket is created with info and returns the file descriptor
     int sockfd = socket(servinfo->ai_family, servinfo->ai_socktype, servinfo->ai_protocol);
 
     // bind for servers to reserve port and listen for connections 
