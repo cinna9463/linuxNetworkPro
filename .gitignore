@@ -5,8 +5,4 @@ threads/
 ./sinclient
 ./exClient
 ./mulserve
-./threads/th
-./hello
-./sinclient
-./exClient
-./mulserve
+
