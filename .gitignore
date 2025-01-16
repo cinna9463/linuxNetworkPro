@@ -2,7 +2,17 @@
 #ignore files in threads folder
 threads/
 
-#ignore exe files
+# Ignore specific executable files
 sinclient
 exClient
 mulserve
+mulserver
+
+# Ignore all .html files
+*.html
+
+# Ignore common executable file names
+a.out
+*.out
+*.bin
+*.run
