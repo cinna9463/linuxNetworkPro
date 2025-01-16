@@ -29,9 +29,15 @@ void *clientResponse(void *args)
     while(1)
     {
         sem_wait(&semaphore);
+        char clientsent[500];
+        
+        int recvNo = recv(client[i].clientSock, clientsent, sizeof(clientsent), 0);
+        printf("message received = %s\n",clientsent);
+        printf("number of bytes received= %d\n",recvNo);
+
         int sentNo = send(client[i].clientSock,client[i].msg, sizeof(char)*(client[i].len), 0);
 
-        printf("message sent = %s\n",client[i].msg);
+        printf("message sent ");
         printf("number of bytes sent= %d\n\n",sentNo);
 
         if(i==Len)
@@ -107,7 +113,7 @@ int main()
     int i=0;
     int clientSock;
     
-FILE *htmlFile;
+    FILE *htmlFile;
     htmlFile = fopen("Response.html", "r");
     if (htmlFile == NULL) {
         perror("Error opening file");
