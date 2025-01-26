@@ -1,7 +1,10 @@
 #ignore files in threads folder
 threads/
+.vscode/
+build/
 
 # Ignore specific executable files
+sinserver
 sinclient
 exClient
 mulserve
@@ -9,6 +12,8 @@ mulserver
 
 # Ignore all .html files
 *.html
+*.ico
+*.png
 
 # Ignore common executable file names
 a.out
