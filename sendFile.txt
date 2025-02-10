@@ -1,0 +1,4 @@
+This is a practice file for file transfer.
+You can use this file to test various file transfer methods such as FTP, SCP, or any other protocol.
+Make sure to verify the integrity of the file after transfer.
+Happy practicing!
